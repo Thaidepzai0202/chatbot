@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Viền -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent"/> <!-- Không có màu nền -->
+            <size android:width="18dp" android:height="18dp"/> <!-- Kích thước bao ngoài (bao gồm viền) -->
+            <stroke android:width="0.5dp" android:color="@color/black"/> <!-- Viền đen -->
+            <corners android:radius="10dp"/> <!-- Đường tròn -->
+        </shape>
+    </item>
+    <!-- Chấm bên trong viền -->
+    <item android:left="1dp" android:right="1dp" android:top="1dp" android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/black"/> <!-- Màu của chấm (đen) -->
+            <size android:width="10dp" android:height="10dp"/> <!-- Kích thước chấm -->
+            <corners android:radius="10dp"/> <!-- Đường tròn -->
+        </shape>
+    </item>
+</layer-list>

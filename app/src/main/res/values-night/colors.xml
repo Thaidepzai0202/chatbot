@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FFFFFFFF</color>
+    <color name="white">#FF000000</color>
+    <color name="graw">#8E9295</color>
+    <color name="background">#FF141718</color>
+    <color name="background_button_white">#232627</color>
+    <color name="hintE6">#8E9295</color>
+    <color name="color_primary_button_background">#232627</color>
+    <color name="color_hint_button_background">#232627</color>
+    <color name="background_edit_text">#232627</color>
+    <color name="color_forget_password">#FFFFFF</color>
+    <color name="background_email_forgot_pass">#80516B96</color>
+    <color name="background2">#232627</color>
+</resources>

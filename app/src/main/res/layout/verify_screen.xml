@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="selectedAcc"
+            type="com.example.chatbot.model.AccountModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background2">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/background_edit_text"
+            android:padding="16dp"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginHorizontal="14dp"
+            android:background="@drawable/background_verify_center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout9"
+                android:layout_width="match_parent"
+                android:layout_height="122dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/SemiBold22ForgetPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Verify Email" />
+
+                <TextView
+                    style="@style/Regular14ACADB9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="We Have Sent Code To Your Phone Number" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    style="@style/SemiBold15ACADB9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text='@{selectedAcc.name + "---" + selectedAcc.email}' />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout10"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="29dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+                <EditText
+                    android:id="@+id/pinDigit1"
+                    style="@style/Light24Black"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/edit_digit_selector"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:paddingBottom="-40dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/pinDigit2"
+                    style="@style/Light24Black"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/edit_digit_selector"
+                    android:gravity="center"
+
+                    android:inputType="number" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/pinDigit3"
+                    style="@style/Light24Black"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/edit_digit_selector"
+                    android:gravity="center"
+
+                    android:inputType="number" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/pinDigit4"
+                    style="@style/Light24Black"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/edit_digit_selector"
+                    android:gravity="center"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/login_button_next_screen"
+                style="@style/Medium16FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:layout_marginHorizontal="29dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/primary_background_button"
+                android:gravity="center"
+                android:text="Verify"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout10" />
+
+            <TextView
+                android:id="@+id/register_button_next_screen"
+                style="@style/Medium16B1B1B1"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/hint_background_button"
+                android:gravity="center"
+                android:text="Send Again"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login_button_next_screen" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
